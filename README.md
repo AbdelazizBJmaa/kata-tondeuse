@@ -5,8 +5,8 @@ The application was developped on
 
 ## for DEPLOY APP with Docker
 1- Create the package  
-``mvn clean package``
+``mvn clean package``  
 2- Build the docker image  
-'''docker build -t tondeuse-batch-app .'''
+``docker build -t tondeuse-batch-app . ``  
 3- Deploy the Docker Image  
-''' docker run -d --name tondeuse-batch tondeuse-batch-app
+`` docker run -d --name tondeuse-batch tondeuse-batch-app ``  
