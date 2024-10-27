@@ -1,4 +1,4 @@
-package com.kata.Tondeuse;
+package com.kata.Tondeuse.parse;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

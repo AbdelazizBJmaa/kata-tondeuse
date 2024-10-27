@@ -1,5 +1,7 @@
 package com.kata.Tondeuse.application.parse;
 
+import java.util.Objects;
+
 import com.kata.Tondeuse.domain.model.Lawn;
 
 public class LawnParser extends AbstractLineParser<Lawn>{
@@ -9,7 +11,7 @@ public class LawnParser extends AbstractLineParser<Lawn>{
 	}
 
 	public boolean isValidLine() {
-		return !line.isBlank() && line.matches("^[0-9] [0-9]$");
+		return !Objects.isNull(line) && !line.isBlank() && line.matches("^[0-9] [0-9]$");
 	}
 
 	@Override

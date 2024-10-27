@@ -1,5 +1,7 @@
 package com.kata.Tondeuse.application.parse;
 
+import java.util.Objects;
+
 import com.kata.Tondeuse.domain.model.Direction;
 import com.kata.Tondeuse.domain.model.Position;
 
@@ -11,7 +13,7 @@ public class PositionParse extends AbstractLineParser<Position> {
 
 	@Override
 	protected boolean isValidLine() {
-		return !line.isBlank() && line.matches("^[0-9] [0-9] (N|S|W|E)$");
+		return !Objects.isNull(line) && !line.isBlank() && line.matches("^[0-9] [0-9] (N|S|W|E)$");
 	}
 
 	@Override
