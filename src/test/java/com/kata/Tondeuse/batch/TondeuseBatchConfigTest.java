@@ -15,17 +15,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class TondeuseBatchConfigTest {
 
-	  @Autowired
-	  private JobLauncherTestUtils jobLauncherTestUtils;
-	  
-	  @Autowired
-	  private Job tondeuseJob;
-	
+	@Autowired
+	private JobLauncherTestUtils jobLauncherTestUtils;
+
 	@Test
 	void testJob() throws Exception {
-		 JobExecution jobExecution = jobLauncherTestUtils.launchJob();
-	        
-	     assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
+		JobExecution jobExecution = jobLauncherTestUtils.launchJob();
+
+		assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
 	}
 
 }

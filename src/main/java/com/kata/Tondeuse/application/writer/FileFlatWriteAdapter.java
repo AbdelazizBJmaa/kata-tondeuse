@@ -19,7 +19,7 @@ public class FileFlatWriteAdapter extends FlatFileItemWriter<Position>{
 		LocalDateTime localDateTime = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(PATTERN_YYYY_MM_DD_HH_MM_SS);		
 		setName("TondeuseItemWriter");
-		setResource(new FileSystemResource(fileOutput+"_"+localDateTime.format(formatter)));
+		setResource(new FileSystemResource(fileOutput+"_"+localDateTime.format(formatter)+".txt"));
 		setLineAggregator(new CustomWriterAggregate());
 	}
 	
