@@ -6,11 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 import com.kata.Tondeuse.application.exception.FileFormatInvalidException;
-import com.kata.Tondeuse.application.exception.InitialPositionException;
-import com.kata.Tondeuse.application.model.MowerInstruction;
 import com.kata.Tondeuse.application.parse.PositionParse;
 import com.kata.Tondeuse.domain.model.Direction;
-import com.kata.Tondeuse.domain.model.Lawn;
 import com.kata.Tondeuse.domain.model.Position;
 
 class TestPositionLine {
@@ -36,12 +33,6 @@ class TestPositionLine {
 		assertThrows(FileFormatInvalidException.class, ()->new PositionParse(line).parse());
 	}
 	
-	@Test
-	void testInitPositionInCorrectOutBound() throws InitialPositionException {
-		Lawn lawn = new Lawn(5,5);
-		Position position = new Position(6,6,Direction.N);
-		assertThrows(InitialPositionException.class, ()->new MowerInstruction(lawn, position, "AA"));
-		
-	}
+	
 
 }

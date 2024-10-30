@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import com.kata.Tondeuse.application.model.MowerInstruction;
 import com.kata.Tondeuse.application.processor.MowerProcessingAdapter;
 import com.kata.Tondeuse.application.reader.InstructionFileReaderAdapter;
 import com.kata.Tondeuse.application.writer.FileFlatWriteAdapter;
